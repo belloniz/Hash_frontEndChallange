@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anticipation</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			input[type=number],input[type=text]{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="valorVenda">Informe o valor da venda*</label>
+			<input type="text" name="valorVenda" id="valorVenda" class="inputNumber" data-thousands="." data-decimal="," data-prefix="R$ ">
+
+			<label for="numeroParcelas">Em quantas parcelas*</label>
+			<input type="number" name="numeroParcelas" id="numeroParcelas" class="inputNumber" max="12">
+
+			<label for="percentualMdr">Informe o percentual de MDR*</label>
+			<input type="number" name="percentualMdr" id="percentualMdr" class="inputNumber">
+		</form>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
