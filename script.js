@@ -35,7 +35,7 @@
 		// 	var valorVenda = document.getElementById("valorVenda").value;
 		// 	var numeroParcelas = document.getElementById("numeroParcelas").value;
 		// 	var percentualMdr = document.getElementById("percentualMdr").value;
-		// }
+		// } test
 
 		$('#valorVenda').maskMoney();
 
