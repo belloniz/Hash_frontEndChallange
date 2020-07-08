@@ -198,6 +198,7 @@ bottom: 34%;
 		}
 			#numeroParcelas.inputNumber.Warning {
 				border-color: red;
+<<<<<<< HEAD
 				}*/
 			</style>
 		</head>
@@ -230,3 +231,30 @@ bottom: 34%;
 			<script type="text/javascript" src="script.js"></script>
 		</body>
 		</html>
+=======
+			}*/
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="valorVenda">Informe o valor da venda*</label>
+			<input type="text" name="valorVenda" id="valorVenda" class="inputNumber" data-thousands="." data-decimal="," data-prefix="R$ ">
+
+			<label for="numeroParcelas">Em quantas parcelas*</label>
+			<input type="number" name="numeroParcelas" id="numeroParcelas" class="inputNumber" max="12">
+
+			<label for="percentualMdr">Informe o percentual de MDR*</label>
+			<input type="number" name="percentualMdr" id="percentualMdr" class="inputNumber">
+		</form>
+
+		<div id="amanha"></div>
+		<div id="15d"></div>
+		<div id="30d"></div>
+		<div id="90d"></div>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
+>>>>>>> 0235d4b09b7d3af764fd3d6478c4fb7a058ef791
