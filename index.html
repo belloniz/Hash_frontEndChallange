@@ -1,32 +1,232 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Anticipation</title>
-		<meta charset="utf-8">
-		<style type="text/css">
-			input[type=number],input[type=text]{
-				display: block;
-			}
+<head>
+	<title>Anticipation</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*input[type=number],input[type=text]{
+			display: block;
+		}
 
-			/*#numeroParcelas.inputNumber.Warning {
+		@font-face {
+			font-family: "Source Sans Pro";
+			src: url(SourceSansPro-Regular.ttf);
+		}
+
+		body {
+			background: #F2F2F2;
+		}
+
+		#rectangle {
+			position: absolute;
+			left: 20.31%;
+			right: 20.31%;
+			top: 22.29%;
+			bottom: 22.14%;
+
+			background: #FFFFFF;
+			border: 1px solid #D1DCE3;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+
+		#rectangle_copy {
+			position: absolute;
+			left: 57.13%;
+			right: 20.31%;
+			top: 22.29%;
+			bottom: 22.14%;
+
+			background: rgba(209, 220, 227, 0.18);
+			border-radius: 4px;
+		}
+
+		#title {
+			position: absolute;
+			height: 30px;
+			right: 49.8%;
+			top: 41px;
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 30px;
+
+			color: #656565;
+		}
+
+		h3 {
+			position: absolute;
+			height: 20px;
+			left: 60.55%;
+			right: 28.03%;
+			top: calc(50% - 20px/2 - 101px);
+
+			font-family: Source Sans Pro;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+
+			color: #3D75BB;
+		}
+
+		hr {
+			position: absolute;
+			left: 60.55%;
+			right: 23.73%;
+			top: 37.57%;
+			bottom: 62.14%;
+
+			mix-blend-mode: normal;
+			opacity: 0.3;
+			border: 1px solid #5D9CEC;
+		}
+
+		#label_valorVenda {
+			position: absolute;
+			height: 18px;
+			left: 25.78%;
+			right: 59.18%;
+			top: calc(50% - 18px/2 - 92px);
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+
+			color: #656565;
+		}
+
+		#valorVenda {
+			position: absolute;
+			left: 25.78%;
+			right: 49.71%;
+			top: 39%;
+			bottom: 55.71%;
+
+			background: #FFFFFF;
+			border: 1px solid #DDE6E9;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+
+		#label_numeroParcelas {
+			position: absolute;
+			height: 18px;
+			left: 25.78%;
+			right: 61.52%;
+			top: calc(50% - 18px/2 - 5px);
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+
+			color: #656565;
+		}
+
+		#numeroParcelas {
+			position: absolute;
+			left: 25.78%;
+			right: 49.71%;
+			top: 51.43%;
+			bottom: 43.29%;
+
+			background: #FFFFFF;
+			border: 1px solid #66AFE9;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+
+		#label_percentualMdr {
+			position: absolute;
+			height: 18px;
+			left: 25.78%;
+			right: 56.74%;
+			top: calc(50% - 18px/2 + 99px);
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+
+			color: #656565;
+		}
+
+		#percentualMdr {
+			position: absolute;
+			left: 25.78%;
+			right: 49.71%;
+			top: 66.29%;
+			bottom: 28.43%;
+
+			background: #FFFFFF;
+			border: 1px solid #DDE6E9;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+
+		#results {
+			position: absolute;
+			height: 184px;
+			left: 60.55%;
+			right: 27.05%;
+			top: calc(50% - 184px/2 + 20px);
+
+			font-family: Source Sans Pro;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 46px;
+
+
+			color: #5D9CEC;
+		}
+
+		#results,hr,h3 {
+			position: absolute;
+left: 60.55%;
+right: 23.73%;
+top: 34.14%;
+bottom: 34%;
+		}
+			#numeroParcelas.inputNumber.Warning {
 				border-color: red;
-			}*/
-		</style>
-	</head>
-	<body>
-		<form>
-			<label for="valorVenda">Informe o valor da venda*</label>
-			<input type="text" name="valorVenda" id="valorVenda" class="inputNumber" data-thousands="." data-decimal="," data-prefix="R$ ">
+				}*/
+			</style>
+		</head>
+		<body>
+			<div id="rectangle">
+				<span id="title">Simule sua Antecipação</span>
+				<form>
+					<label for="valorVenda" id="label_valorVenda">Informe o valor da venda*</label>
+					<input type="text" name="valorVenda" id="valorVenda" class="inputNumber" data-thousands="." data-decimal="," data-prefix="R$ ">
 
-			<label for="numeroParcelas">Em quantas parcelas*</label>
-			<input type="number" name="numeroParcelas" id="numeroParcelas" class="inputNumber" max="12">
+					<label for="numeroParcelas" id="label_numeroParcelas">Em quantas parcelas*</label>
+					<input type="number" name="numeroParcelas" id="numeroParcelas" class="inputNumber" max="12">
 
-			<label for="percentualMdr">Informe o percentual de MDR*</label>
-			<input type="number" name="percentualMdr" id="percentualMdr" class="inputNumber">
-		</form>
+					<label for="percentualMdr" id="label_percentualMdr">Informe o percentual de MDR*</label>
+					<input type="number" name="percentualMdr" id="percentualMdr" class="inputNumber">
+				</form>
+			</div>
+			<div id="rectangle_copy">
+				<hr>
+				<div id="results"></div>
+				<h3>VOCÊ RECEBERÁ:</h3>
+				<div id="amanha"></div>
+				<div id="15d"></div>
+				<div id="30d"></div>
+				<div id="90d"></div>
+			</div>
 
-		<script type="text/javascript" src="jquery.min.js"></script>
-		<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-	</body>
-</html>
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
+			<script type="text/javascript" src="script.js"></script>
+		</body>
+		</html>
