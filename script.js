@@ -75,7 +75,6 @@
 			};
 
 			$.ajax(settings).done(function (response) {
-<<<<<<< HEAD
 				const formatter = new Intl.NumberFormat('pt-BR', {
 					style: 'currency',
 					currency: 'BRL',
@@ -102,11 +101,10 @@
 				parseInt(noventaDias);
 				noventaDias = noventaDias/100;
 				document.getElementById("90d").innerHTML = formatter.format(noventaDias);
-=======
+
 				console.log(response);
 				var dias = [];
 				dias = Object.values(response);
 				console.log(dias[0]);
->>>>>>> 0235d4b09b7d3af764fd3d6478c4fb7a058ef791
 			});
 		});
