@@ -84,27 +84,17 @@
 				console.log(response);
 				var dias = [];
 				dias = Object.values(response);
-				console.log("aqui:");
-				var amanha = dias[0];
-				parseInt(amanha);
-				amanha = amanha/100;
-				document.getElementById("amanha").innerHTML = formatter.format(amanha);
-				var quinzeDias = dias[1];
-				parseInt(quinzeDias);
-				quinzeDias = quinzeDias/100;
-				document.getElementById("15d").innerHTML = formatter.format(quinzeDias);
-				var trintaDias = dias[2];
-				parseInt(trintaDias);
-				trintaDias = trintaDias/100;
-				document.getElementById("30d").innerHTML = formatter.format(trintaDias);
-				var noventaDias = dias[3];
-				parseInt(noventaDias);
-				noventaDias = noventaDias/100;
-				document.getElementById("90d").innerHTML = formatter.format(noventaDias);
 
-				console.log(response);
-				var dias = [];
-				dias = Object.values(response);
-				console.log(dias[0]);
+				for (var i = 3; i >= 0; i--) {
+					dias[i] = parseInt(dias[i]);
+					dias[i] = dias[i]/100;
+					dias[i] = formatter.format(dias[i]);
+					console.log(dias[i]);
+				}
+
+				document.getElementById("amanha").innerHTML = dias[0];
+				document.getElementById("15d").innerHTML = dias[1];
+				document.getElementById("30d").innerHTML = dias[2];
+				document.getElementById("90d").innerHTML = dias[3];
 			});
 		});
