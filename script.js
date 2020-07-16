@@ -6,7 +6,7 @@
 			minimumFractionDigits: 2
 		})
 
-		$(".inputNumber").keyup(function(){
+		$('input').keyup(function(){
 			var valorVenda = document.getElementById("valorVenda").value;
 			valorVenda = valorVenda.replace(",","");
 			while (valorVenda.includes(".") == true ){

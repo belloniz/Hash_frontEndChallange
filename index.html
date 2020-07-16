@@ -23,8 +23,11 @@
 			position: relative;
 			width: 608px;
 			height: 389px;
-			margin: 0 auto;
-			top:150px;
+			margin: 0;
+			top:156px;
+			bottom:155px;
+			right: 208px;
+			left: 208px;
 
 			background: #FFFFFF;
 			border: 1px solid #D1DCE3;
@@ -41,7 +44,7 @@
 
 			font-family: Source Sans Pro;
 			font-style: normal;
-			font-weight: bold;
+			font-weight: bolder; 
 			font-size: 24px;
 			line-height: 30px;
 			color: #656565;
@@ -83,6 +86,12 @@
 			padding-top: 10px;
 			padding-left: 14px;
 			padding-bottom: 9px;
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
 		}
 
 		#label_numeroParcelas {
@@ -121,6 +130,12 @@
 			padding-top: 10px;
 			padding-left: 14px;
 			padding-bottom: 9px;
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
 		}
 
 		#parcelas {
@@ -136,6 +151,8 @@
 			font-size: 11px;
 			line-height: 14px;
 			color: #CECECE;
+
+			
 		}
 
 		#label_percentualMdr {
@@ -174,6 +191,12 @@
 			padding-top: 10px;
 			padding-left: 14px;
 			padding-bottom: 9px;
+
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
 		}
 
 		#rectangle_copy {
@@ -228,20 +251,30 @@
 		span{
 			font-weight: bold;
 		}
+
+		
+
+		#valorVenda:focus,#numeroParcelas:focus,#percentualMdr:focus {
+			outline: none;
+			background: #FFFFFF;
+			border: 1px solid #66AFE9 !important;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
 	</style>
 		</head>
 		<body>
 			<div id="rectangle">
 				<span id="title">Simule sua Antecipação</span><br>
 					<label for="valorVenda" id="label_valorVenda">Informe o valor da venda *</label>
-					<input type="text" name="valorVenda" id="valorVenda" class="inputNumber" data-thousands="." data-decimal="," data-prefix="R$ ">
+					<input type="text" name="valorVenda" id="valorVenda"  data-thousands="." data-decimal="," data-prefix="R$ ">
 
 					<label for="numeroParcelas" id="label_numeroParcelas">Em quantas parcelas *</label>
-					<input type="number" name="numeroParcelas" id="numeroParcelas" class="inputNumber" max="12">
+					<input type="number" name="numeroParcelas" id="numeroParcelas"  max="12">
 					<span id="parcelas">Máximo de 12 parcelas</span>
 
 					<label for="percentualMdr" id="label_percentualMdr">Informe o percentual de MDR *</label>
-					<input type="number" name="percentualMdr" id="percentualMdr" class="inputNumber">
+					<input type="number" name="percentualMdr" id="percentualMdr" >
 
 				<div id="rectangle_copy">
 					<h3>VOCÊ RECEBERÁ:</h3>
