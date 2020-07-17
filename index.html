@@ -11,7 +11,7 @@
 
 		@font-face {
 			font-family: "Source Sans Pro";
-			src: url(SourceSansPro-Regular.ttf);
+			src: url(font/SourceSansPro-Regular.ttf);
 		}
 
 		body {
@@ -19,8 +19,9 @@
 			width: 1024px;
 		}
 
-		#rectangle {
+		#retangulo {
 			position: relative;
+
 			width: 608px;
 			height: 389px;
 			margin: 0;
@@ -35,8 +36,9 @@
 			border-radius: 4px;
 		}
 
-		#title {
+		#titulo {
 			position: absolute;
+
 			top:41px;
 			left: 56px;
 			bottom: 318px;
@@ -50,8 +52,27 @@
 			color: #656565;
 		}
 
-		#label_valorVenda{
+		#labelValorVenda,#labelPercentualMdr,#labelNumeroParcelas{
+			font-family: Source Sans Pro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: #656565;
+		}
+
+		#valorVenda,#numeroParcelas,#percentualMdr{
+			padding-top: 10px;
+			padding-left: 14px;
+			padding-bottom: 9px;
+
+			width: 251px;
+			height: 37px;
+		}
+
+		#labelValorVenda{
 			position: absolute;
+
 			top:93px;
 			left: 56px;
 			right: 398px;
@@ -59,34 +80,21 @@
 
 			width: 154px;
 			height: 18px;
-
-			font-family: Source Sans Pro;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 14px;
-			line-height: 18px;
-			color: #656565;
 		}
 
 		#valorVenda {
 			position: absolute;
+
 			top:117px;
 			left: 56px;
 			right: 301px;
 			bottom: 235px;
-
-			width: 251px;
-			height: 37px;
 
 			background: #FFFFFF;
 			border: 1px solid #DDE6E9;
 			box-sizing: border-box;
 			border-radius: 4px;
 
-			padding-top: 10px;
-			padding-left: 14px;
-			padding-bottom: 9px;
-
 			font-family: Source Sans Pro;
 			font-style: normal;
 			font-weight: normal;
@@ -94,8 +102,9 @@
 			line-height: 18px;
 		}
 
-		#label_numeroParcelas {
+		#labelNumeroParcelas {
 			position: absolute;
+
 			top:180px;
 			left: 56px;
 			right: 422px;
@@ -103,33 +112,20 @@
 
 			width: 130px;
 			height: 18px;
-
-			font-family: Source Sans Pro;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 14px;
-			line-height: 18px;
-			color: #656565;
 		}
 
 		#numeroParcelas {
 			position: absolute;
+
 			top:204px;
 			left: 56px;
 			right: 301px;
 			bottom: 148px;
 
-			width: 251px;
-			height: 37px;
-
 			background: #FFFFFF;
 			border: 1px solid #DDE6E9;
 			box-sizing: border-box;
 			border-radius: 4px;
-
-			padding-top: 10px;
-			padding-left: 14px;
-			padding-bottom: 9px;
 
 			font-family: Source Sans Pro;
 			font-style: normal;
@@ -140,6 +136,7 @@
 
 		#parcelas {
 			position: absolute;
+
 			top:244px;
 			left: 56px;
 			right: 422px;
@@ -155,7 +152,7 @@
 			
 		}
 
-		#label_percentualMdr {
+		#labelPercentualMdr {
 			position: absolute;
 			top:284px;
 			left: 56px;
@@ -164,13 +161,6 @@
 
 			width: 179px;
 			height: 18px;
-
-			font-family: Source Sans Pro;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 14px;
-			line-height: 18px;
-			color: #656565;
 		}
 
 		#percentualMdr {
@@ -180,17 +170,10 @@
 			right: 301px;
 			bottom: 44px;
 
-			width: 251px;
-			height: 37px;
-
 			background: #FFFFFF;
 			border: 1px solid #DDE6E9;
 			box-sizing: border-box;
 			border-radius: 4px;
-
-			padding-top: 10px;
-			padding-left: 14px;
-			padding-bottom: 9px;
 
 			font-family: Source Sans Pro;
 			font-style: normal;
@@ -199,7 +182,7 @@
 			line-height: 18px;
 		}
 
-		#rectangle_copy {
+		#retanguloMenor {
 			position: absolute;
 			width: 231px;
 			height: 389px;
@@ -214,8 +197,10 @@
 
 		h3 {
 			position: absolute;
+
 			top: 83px;
 			left: 35px;
+
 			font-family: Source Sans Pro;
 			font-style: italic;
 			font-weight: bold;
@@ -227,19 +212,23 @@
 
 		hr {
 			position: absolute;
+
 			top: 107px;
 			width: 161px;
 			left: 35px;
 			right: 35px;
+
 			mix-blend-mode: normal;
 			opacity: 0.3;
 			border: 1px solid #5D9CEC;
 		}
 
-		#results {
+		#resultados {
 			position: absolute;
+
 			top:122px;
 			left: 35px;
+
 			font-family: Source Sans Pro;
 			font-style: italic;
 			font-weight: normal;
@@ -252,34 +241,29 @@
 			font-weight: bold;
 		}
 
-		
-
 		#valorVenda:focus,#numeroParcelas:focus,#percentualMdr:focus {
 			outline: none;
-			background: #FFFFFF;
 			border: 1px solid #66AFE9 !important;
-			box-sizing: border-box;
-			border-radius: 4px;
 		}
 	</style>
 		</head>
 		<body>
-			<div id="rectangle">
-				<span id="title">Simule sua Antecipação</span><br>
-					<label for="valorVenda" id="label_valorVenda">Informe o valor da venda *</label>
+			<div id="retangulo">
+				<span id="titulo">Simule sua Antecipação</span><br>
+					<label for="valorVenda" id="labelValorVenda">Informe o valor da venda *</label>
 					<input type="text" name="valorVenda" id="valorVenda"  data-thousands="." data-decimal="," data-prefix="R$ ">
 
-					<label for="numeroParcelas" id="label_numeroParcelas">Em quantas parcelas *</label>
+					<label for="numeroParcelas" id="labelNumeroParcelas">Em quantas parcelas *</label>
 					<input type="number" name="numeroParcelas" id="numeroParcelas"  max="12">
 					<span id="parcelas">Máximo de 12 parcelas</span>
 
-					<label for="percentualMdr" id="label_percentualMdr">Informe o percentual de MDR *</label>
+					<label for="percentualMdr" id="labelPercentualMdr">Informe o percentual de MDR *</label>
 					<input type="number" name="percentualMdr" id="percentualMdr" >
 
-				<div id="rectangle_copy">
+				<div id="retanguloMenor">
 					<h3>VOCÊ RECEBERÁ:</h3>
 					<hr>
-					<div id="results">
+					<div id="resultados">
 						Amanhã: <span id="amanha">R$ 0,00</span><br>
 						Em 15 dias: <span id="15d">R$ 0,00</span><br>
 						Em 30 dias: <span id="30d">R$ 0,00</span><br>
@@ -287,9 +271,9 @@
 					</div>
 				</div>
 			</div>	
-			<script type="text/javascript" src="jquery.min.js"></script>
-			<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
-			<script type="text/javascript" src="script.js"></script>
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/jquery.maskMoney.min.js"></script>
+			<script type="text/javascript" src="js/script.js"></script>
 		</body>
 		</html>
 		</style>
