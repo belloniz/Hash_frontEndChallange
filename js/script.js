@@ -1,7 +1,7 @@
 		// Adicionar máscara no campo de valor da venda
 		$('#valorVenda').maskMoney();
 
-		// Função para formatar os valores finais exibidos para o usuário
+		// Função para formatar os valores finais exibidos para o usuário...
 		const formatter = new Intl.NumberFormat('pt-BR', {
 			style: 'currency',
 			currency: 'BRL',
